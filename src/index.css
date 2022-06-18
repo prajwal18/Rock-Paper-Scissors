@@ -1,13 +1,451 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+:root{
+  --gradient: linear-gradient(to right, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  --font-size: 16px;
+  --font-used: 'Barlow Semi Condensed', sans-serif;
+
+  /* Colors Used */
+  --scissor-Gradient: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  --paper-Gradient: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  --rock-Gradient: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  --lizard-Gradient: radial-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+  --spock-Gradient: radial-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+
+  /* Neutral */
+  --dark-Text: hsl(229, 25%, 31%);
+  --score-Text: hsl(229, 64%, 46%);
+  --header-Outline: hsl(217, 16%, 45%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,*::before,*::after{
+  margin: 0px; padding: 0px;
+  box-sizing: border-box;
 }
+button{
+  cursor: pointer;
+}
+
+
+body{
+  display: flex;
+  min-width: 375px;
+  background: var(--gradient);
+  font-size: var(--font-size);
+  font-family: var(--font-used);
+  color: white;
+}
+#root{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+.App{
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 10px;
+  padding-bottom: 50px;
+}
+
+/* Working on Title and Score */
+.title-score{
+  margin-top: 20px;
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.title{
+  padding: 10px;
+  display: flex;
+  gap: 1rem;
+  border-radius: 5px;
+  background: white;
+}
+.title > div {
+  cursor: pointer;
+  order: 2;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  transition-duration: 500ms;
+}
+.title > .play{
+  background-color: #00a6ff;
+  order: 1;
+}
+
+.score{
+  min-width: 100px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  font-size: 1.5rem;
+  color: var(--score-Text);
+  background-color: rgb(250, 250, 248);
+  border-radius: 10px;
+}
+
+.score .score-num {
+  font-size: 3rem;
+  color: var(--dark-Text);
+}
+/*--------------------*/
+
+
+/*Page Start*/
+.page-start,.page-pick{min-height: 350px;}
+.page-start{
+  max-width: 500px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.page-start.rpslz{
+  max-width: 700px;
+}
+
+div.rock, div.paper, div.scissor, div.lizard, div.spock {
+  margin: 0px 20px;
+  height: 150px; width: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center; align-items: center;
+}
+.rock{background: var(--rock-Gradient);}
+.paper{background: var(--paper-Gradient);}
+.scissor{background: var(--scissor-Gradient);}
+.lizard{background: var(--lizard-Gradient);}
+.spock{background: var(--spock-Gradient);}
+
+.rock button,
+.paper button,
+.scissor button,
+.lizard button,
+.spock button {
+  padding: 2rem;
+  height: 120px;
+  width: 120px;
+  border: none;
+  border-radius: 50%;
+}
+
+.rock button:hover,
+.paper button:hover,
+.scissor button:hover,
+.lizard button:hover,
+.spock button:hover{
+  background-color: rgb(212, 245, 255);
+}
+/*---------------*/
+
+
+/*Page Pick*/
+.page-pick{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.seg-one, .seg-three, .seg-two{
+  display: flex;
+  padding: 0px 20px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2.5rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+
+.seg-two{
+  gap: 10px;
+  font-size: 2rem;
+}
+.seg-two button{
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: white;
+  color: var(--dark-Text);
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.seg-two button:hover{
+  color: hsl(349, 70%, 56%);
+}
+.seg-two button:active{
+  color: hsl(0, 0%, 0%);
+  background-color: rgb(255, 244, 225);
+}
+
+.page-pick .seg-one{
+  order: 1;
+}
+.page-pick .seg-two{
+  order: 2;
+}
+.page-pick .seg-three{
+  order: 3;
+}
+
+.sub-seg-three{
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.page-pick .rock, 
+.page-pick .paper,
+.page-pick .scissor,
+.page-pick .lizard,
+.page-pick .spock{
+  height: 170px;
+  width: 170px;
+}
+
+.page-pick .rock button, 
+.page-pick .paper button,
+.page-pick .scissor button,
+.page-pick .lizard button,
+.page-pick .spock button{
+  height: 140px;
+  width: 140px;
+}
+
+.win{
+  box-shadow: 0px 0px 200px rgba(255, 255, 255, 0.5);
+}
+/*--------------*/
+
+
+
+/*Rules*/
+.rules{
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: right;
+}
+
+.rules button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: white;
+  background: none;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.rules button:hover {
+  color: black;
+  background-color: white;
+}
+.rules button:active {
+  border: 2px solid rgb(129, 234, 129);
+  background-color: rgb(129, 234, 129);
+}
+
+.game-rule  img{
+  display: block;
+}
+.game-rule {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+.game-rule .title{
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--dark-Text);
+  font-size: 2rem;
+}
+.game-rule .title img {
+  cursor: pointer; 
+}
+
+.dis-rules{
+  display: block;
+}
+.hide-rules{
+  display: none;
+}
+/*-------------------*/
+
+
+/*Smaller Screens Designs*/
+@media screen and (max-width: 1000px) {
+  .rules{
+    max-width: 700px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .title-score .title img{
+    height: 80px;
+  }
+
+  .title-score, .page-start.rpslz, .rules{
+    max-width: 550px;
+  }
+  .page-start{
+    max-width: 400px;
+  }
+  /*Page Start*/
+  div.rock, div.paper, div.scissor, div.lizard, div.spock {
+    margin: 0px 10px;
+    height: 130px; width: 130px;
+  }
+  .rock button,
+  .paper button,
+  .scissor button,
+  .lizard button,
+  .spock button {
+    padding: 5px;
+    height: 100px;
+    width: 100px;
+  }
+
+  /*Page Pick*/
+  .page-start,.page-pick{min-height: 280px;}
+  .seg-one, .seg-three, .seg-two{
+    padding: 0px 10px;
+    gap: 2rem;
+  }
+  .seg-two{font-size: 1.7rem;}
+  .seg-two button{
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+  .sub-seg-three{
+    height: 100px;
+    width: 100px;
+  }
+  .page-pick .rock, 
+  .page-pick .paper,
+  .page-pick .scissor,
+  .page-pick .lizard,
+  .page-pick .spock{
+    height: 130px;
+    width: 130px;
+  }
+  .page-pick .rock button, 
+  .page-pick .paper button,
+  .page-pick .scissor button,
+  .page-pick .lizard button,
+  .page-pick .spock button{
+    height: 100px;
+    width: 100px;
+  }
+  .win{
+    box-shadow: 0px 0px 70px rgba(255, 255, 255, 0.5);
+  }
+  /*--------------*/
+}
+
+@media screen and (max-width: 600px) {
+  .title-score .title img{height: 50px;}
+  .title-score, .page-start.rpslz, 
+  .page-pick, .rules{max-width: 400px;}
+  .page-start{max-width: 300px;}
+
+  .page-pick{flex-flow: row wrap;}
+  .page-pick .seg-two{order: 3;}
+  .page-pick .seg-three{order: 2;}
+  .page-pick .seg-two{gap: 1rem; margin-top: 30px;}
+
+  .title-score .score{font-size: 0.9rem; min-width: 70px;}
+  .title-score .score-num{font-size: 1.8rem;}
+
+  .rules{
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .win{
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.5);
+  }
+
+  /*Page Pick*/
+  .seg-one, .seg-three{font-size: 0.9rem;}
+  .seg-two{font-size: 1.5rem;}
+  .sub-seg-three{
+    height: 90px;
+    width: 90px;
+  }
+  .page-pick .rock, 
+  .page-pick .paper,
+  .page-pick .scissor,
+  .page-pick .lizard,
+  .page-pick .spock{
+    height: 110px;
+    width: 110px;
+  }
+  .page-pick .rock button, 
+  .page-pick .paper button,
+  .page-pick .scissor button,
+  .page-pick .lizard button,
+  .page-pick .spock button{
+    height: 90px;
+    width: 90px;
+  }
+  /*Page Start*/
+  div.rock, div.paper, div.scissor, div.lizard, div.spock {
+    margin: 0px 5px;
+    height: 110px; width: 110px;
+  }
+  .rock button,
+  .paper button,
+  .scissor button,
+  .lizard button,
+  .spock button {
+    padding: 0px;
+    height: 90px;
+    width: 90px;
+  }
+
+  /*Game Rules*/
+  .game-rule{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0px;
+    gap: 2rem;
+  }
+  .game-rule .title{
+    margin-bottom: 2rem;
+  }
+  .game-rule .rule-img{
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+
+
+

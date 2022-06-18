@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Todo Application
+Rock, Paper, Scissors game developed in react. You can Toggle between the classic Rock, Paper, Scissor game or 
+choose to play the more dynamic Rock, Paper, Scissor, Lizard, Spock game.
+### Rules for Rock, Paper, Scissors, Lizzard, Spock
+Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard. Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock and as it always has Rock crushes Scissors.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Author
 
-In the project directory, you can run:
+- [@prajwalgautam](https://www.github.com/prajwal18)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Play Rock Paper Scissors
+- Play Rock Paper Scissor Lizard Spock
+- Keep track of Score
+- Desktop and Mobile View
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Demo
+#### Desktop View (Rock, Paper, Scissors)
+![RPSDesktop](https://user-images.githubusercontent.com/28219362/174423996-6b693615-dd05-480b-bd8c-ffee95839816.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Desktop View (Rock, Paper, Scissors, Lizzard, Spock)
+![RPSLSDesktop](https://user-images.githubusercontent.com/28219362/174424021-ebddb398-b78f-4751-8103-28e893b0d07c.jpg)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Mobile View (Rock, Paper, Scissors)
+![RPSMobile](https://user-images.githubusercontent.com/28219362/174424085-6facdae6-151b-412f-a5a9-96c1acf7441a.jpg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Mobile View (Rock, Paper, Scissors, Lizzard, Spock)
+![RPSLSMobile](https://user-images.githubusercontent.com/28219362/174424047-6c52d215-b767-4e6c-96c0-4a5a88fb3542.jpg)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Live Preview
+[@Click Me](https://prajwal18.github.io/Rock-Paper-Scissor/) To Visit the website.
