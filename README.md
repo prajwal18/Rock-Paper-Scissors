@@ -36,4 +36,4 @@ Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spoc
 
 
 ## Live Preview
-[@Click Me](https://prajwal18.github.io/Rock-Paper-Scissor/) To Visit the website.
+[@Click Me](https://prajwal18.github.io/Rock-Paper-Scissors/) To Visit the website.
