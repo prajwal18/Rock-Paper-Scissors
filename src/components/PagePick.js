@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { DataContext } from "../context/DataContext";
 
 const PageStart = () => {
-    const { userPlay, computerPlay, result, PLAY, restart } = useContext(DataContext);
+    const { userPlay, computerPlay, result, PLAY, restart, RESULTS } = useContext(DataContext);
     const [renderPartA, setRenderPartA] = useState(false);
     const [renderPartB, setRenderPartB] = useState(false);
     const [winner, setWinner] = useState(null);
@@ -19,15 +19,16 @@ const PageStart = () => {
         if(renderPartA){
             setTimeout(() => {
                 setRenderPartB(true);
-                if(result === "win") setWinner("p");
-                else if (result === "lose") setWinner("c");
+                if(result === RESULTS.WIN) setWinner("p");
+                else if (result === RESULTS.LOSE) setWinner("c");
                 else setWinner("b");
             }, 500);
         }
-    }, [renderPartA, result]);
+    }, [renderPartA, result, RESULTS]);
 
     return(
         <div className="page-pick">
+            {console.log(winner)}
             <div className="seg-one">
                 <p>You picked</p>
                 <div className={(winner === "p" || winner === "b" ? "win ": " ") + PLAY[userPlay.toUpperCase()].text}>

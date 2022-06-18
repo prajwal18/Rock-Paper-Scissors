@@ -76,7 +76,7 @@ const DataProvider = ({children}) => {
     return(
         <DataContext.Provider value={{
             gameMode, userPlay, computerPlay, result,
-            score, PLAY, PLAY_OPT,
+            score, PLAY, PLAY_OPT, RESULTS,
             onUserPlaySelected, restart, onChangeGameMode
         }}>
             {children}
