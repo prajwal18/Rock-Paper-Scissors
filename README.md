@@ -1,4 +1,4 @@
-# Todo Application
+# Rock, Paper, Scissors
 Rock, Paper, Scissors game developed in react. You can Toggle between the classic Rock, Paper, Scissor game or 
 choose to play the more dynamic Rock, Paper, Scissor, Lizard, Spock game.
 ### Rules for Rock, Paper, Scissors, Lizzard, Spock
